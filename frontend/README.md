@@ -1,50 +1,105 @@
-# React + TypeScript + Vite
+# 📦 StoryBook-components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+**"J'ai eu l'idée de créer une bibliothèque de composants UI réutilisables et modulaires, afin de faciliter la construction d'interfaces utilisateur avec React. Ce projet est pensé pour être **open-source** et **collaboratif**, permettant à chacun de contribuer à l'amélioration et à l'enrichissement des composants.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Chaque composant est soigneusement conçu, testé et documenté via **Storybook**, offrant ainsi une expérience fluide et intuitive pour les développeurs souhaitant intégrer des éléments prêts à l'emploi dans leurs projets."**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Fonctionnalités
 
-- Configure the top-level `parserOptions` property like this:
+✅ **Composants modulaires** : Facilement réutilisables et adaptables à divers projets.  
+✅ **Documentation interactive** : Explorez chaque composant directement dans **Storybook**.  
+✅ **Styles personnalisables** : Facilité d'intégration avec votre propre design system.  
+✅ **Support TypeScript** : Tous les composants sont fortement typés pour une meilleure expérience de développement.  
+✅ **Maintenance simplifiée** : Mise à jour et ajout de nouveaux composants régulièrement.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 📌 Installation
+
+Installez la bibliothèque avec **npm** :
+
+```bash
+npm install storybook-components``
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🎨 Utilisation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Après l'installation, vous pouvez commencer à utiliser les composants :
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```tsx
+import React from "react";
+import { Button } from "storybook-components";
+
+const App = () => {
+  return (
+    <div>
+      <Button label="Cliquez-moi" onClick={() => alert("Bouton cliqué !")} />
+    </div>
+  );
+};
+
+export default App; 
 ```
+
+## 📖 Documentation
+Chaque composant est accompagné d'une **documentation interactive** via **Storybook**.  
+Pour explorer et tester les composants dans un environnement isolé, suivez ces étapes :
+
+*  #### Clonez le dépôt :
+```bash
+git clone https://github.com/damnthonyy/StoryBook-components.git
+```
+
+-   #### Accédez au répertoire :
+```bash
+git clone https://github.com/damnthonyy/StoryBook-components.git
+```
+
+*  #### Installez les dépendances :
+```bash
+git clone https://github.com/damnthonyy/StoryBook-components.git
+```
+
+* #### Lancez Storybook :
+```bash
+npm install
+```
+##
+
+📌 **Une interface Storybook s’ouvrira automatiquement** dans votre navigateur avec tous les composants documentés.
+
+##
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! 🛠  
+Si vous souhaitez proposer un composant ou améliorer un existant, suivez ces étapes :
+
+1.  **Forkez le projet** 📌
+
+2.  **Créez une nouvelle branche** (`feature/mon-nouveau-composant`) :
+
+```bash
+git checkout -b feature/mon-nouveau-composant
+```
+3.  **Ajoutez vos modifications et committez :**
+
+```bash
+git add .
+git commit -m "Ajout du composant XYZ"
+```
+
+4. ** Poussez vos modifications :**
+```bash
+git push origin feature/mon-nouveau-composant
+```
+5. ** **Ouvrez une Pull Request sur GitHub ! 🚀**
+
+##
+
+## 📜 Licence
+
+Antoine Mahassadi.
